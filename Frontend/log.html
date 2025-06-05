@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - CardioLume</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Login Container */
+        .login-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            width: 350px;
+            text-align: center;
+        }
+
+        /* Logo Section */
+        .logo-section img {
+            width: 80px;
+        }
+
+        .logo-section h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        /* Form Styles */
+        .form-section {
+            margin-top: 20px;
+        }
+
+        form label {
+            display: block;
+            text-align: left;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        form input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Login Button */
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 15px;
+            background: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #2563eb;
+        }
+
+        /* Forgot Password Link */
+        .forgot-password {
+            text-align: right;
+            margin-top: 5px;
+        }
+
+        .forgot-password a {
+            color: red;
+            font-size: 12px;
+            text-decoration: none;
+        }
+
+        /* Signup Link */
+        .signup-text {
+            margin-top: 10px;
+        }
+
+        .signup-text a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .signup-text a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-container">
+        <div class="logo-section">
+            <img src="..//image/Red_Simple_Medical_Health_Logo_3-removebg-preview.png" alt="CardioLume Logo">
+            <h2>CardioLume</h2>
+        </div>
+
+        <div class="form-section">
+            <form id="loginForm">
+                <label for="loginInput">Username/Email</label>
+                <input type="text" id="loginInput" name="loginInput" placeholder="Enter phone number / email Id"
+                    required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter Password" required>
+
+                <div class="forgot-password">
+                    <a href="sedn_otp.php">Forgot Password?</a>
+                </div>
+
+                <button type="submit">Login</button>
+            </form>
+
+            <p class="signup-text">Don't have an account? <a href="signup.html">Sign Up</a></p>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+    // Login Form Submission
+    $("#loginForm").submit(function (event) {
+        event.preventDefault();
+
+        let loginInput = $("#loginInput").val().trim();
+        let password = $("#password").val().trim();
+
+        if (!loginInput || !password) {
+            alert("All fields are required!");
+            return;
+        }
+
+        let formData = {
+            loginInput: loginInput,
+            password: password
+        };
+
+        $.ajax({
+            url: "../Backend/login.php",
+            type: "POST",
+            contentType: "application/json",
+            data: JSON.stringify(formData),
+            dataType: "json", // Ensure response is treated as JSON
+            success: function (response) {
+                if (response.status === "success") {
+                    alert(response.message);
+                    window.location.href = "aboutous.html";
+                } else {
+                    alert(response.message || "Invalid login credentials!");
+                }
+            },
+            error: function (xhr, status, error) {
+                console.error("AJAX Error:", status, error);
+                alert("Login failed! Please try again.");
+            }
+        });
+    });
+});
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Foods to Avoid - CardioLume</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding-top: 80px;
+      box-sizing: border-box;
+    }
+
+    .top-bar {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      display: flex;
+      align-items: center;
+      z-index: 10;
+    }
+
+    .logo {
+      width: 40px;
+      height: auto;
+      margin-right: 6px;
+    }
+
+    .logo-text {
+      font-size: 12px;
+      font-weight: bold;
+      color: black;
+    }
+
+    .nav-links {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: bold;
+      color: rgb(25, 22, 22);
+      padding: 4px 8px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-links img {
+      width: 20px;
+      height: 20px;
+    }
+
+    .container {
+      background: white;
+      padding: 16px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 700px;
+      border: 2px solid black;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    .header {
+      font-size: 20px;
+      font-weight: bold;
+      color: black;
+      margin-bottom: 15px;
+    }
+
+    .content-box {
+      background: #f7c5c5;
+      padding: 16px;
+      border-radius: 10px;
+      text-align: left;
+      border: 2px solid black;
+    }
+
+    .food-list {
+      font-size: 14px;
+      line-height: 1.4;
+      font-weight: bold;
+      color: black;
+    }
+
+    .food-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+
+    .food-item img {
+      width: 45px;
+      height: 45px;
+      margin-right: 10px;
+      border-radius: 5px;
+    }
+
+    .processed { color: red; }
+    .sugary { color: darkred; }
+    .fried { color: orange; }
+    .red-meat { color: brown; }
+    .salty { color: purple; }
+
+    .button-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .button {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .prev { background-color: blue; }
+    .next { background-color: black; }
+
+    @media (max-width: 500px) {
+      .logo-text {
+        font-size: 10px;
+      }
+
+      .nav-links a {
+        font-size: 10px;
+        padding: 2px 5px;
+      }
+
+      .header {
+        font-size: 18px;
+      }
+
+      .food-list {
+        font-size: 13px;
+      }
+
+      .button {
+        font-size: 12px;
+        padding: 6px 12px;
+      }
+
+      .container {
+        padding: 12px;
+      }
+
+      .food-item img {
+        width: 38px;
+        height: 38px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <img src="../image/Red_Simple_Medical_Health_Logo_3-removebg-preview.png" alt="CardioLume Logo" class="logo" />
+    <span class="logo-text">CardioLume</span>
+  </div>
+
+  <!-- Navigation Links -->
+  <div class="nav-links">
+    <a href="aboutous.html"><img src="../image/home-removebg-preview (1).png" alt="Home" /></a>
+    <a href="signup.html">Sign In</a>
+    <a href="log.html">Log In</a>
+    <a href="log.html">Log Out</a>
+  </div>
+
+  <!-- Main Container -->
+  <div class="container">
+    <h2 class="header">❌ Foods to Avoid</h2>
+    <div class="content-box">
+      <div class="food-list">
+        <div class="food-item">
+          <img src="../image/procedfood.png" alt="Processed Foods" />
+          <span class="processed">Processed Foods</span> – High in preservatives, trans fats, and additives.
+        </div>
+        <div class="food-item">
+          <img src="../image/dinks.png" alt="Sugary Foods" />
+          <span class="sugary">Sugary Foods</span> – Sodas, pastries, and candies spike blood sugar levels.
+        </div>
+        <div class="food-item">
+          <img src="../image/fried.png" alt="Fried Foods" />
+          <span class="fried">Fried Foods</span> – French fries, chips, and fried chicken increase cholesterol.
+        </div>
+        <div class="food-item">
+          <img src="../image/redmeat.png" alt="Red Meat" />
+          <span class="red-meat">Red Meat</span> – High in saturated fats, leading to heart disease.
+        </div>
+        <div class="food-item">
+          <img src="../image/salt.png" alt="High-Sodium Foods" />
+          <span class="salty">High-Sodium Foods</span> – Excess salt raises blood pressure, affecting heart health.
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="button-container">
+      <button class="button prev" onclick="window.location.href='../Frontend/heathyheart.html'">Previous</button>
+      <button class="button next" onclick="window.location.href='exercise.html'">Next</button>
+    </div>
+  </div>
+</body>
+</html>

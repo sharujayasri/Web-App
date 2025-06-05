@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Regular Health Check-ups - CardioLume</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding-top: 80px;
+      box-sizing: border-box;
+    }
+
+    /* Top bar with logo and nav */
+    .top-bar {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      display: flex;
+      align-items: center;
+      z-index: 10;
+    }
+
+    .logo {
+      width: 40px;
+      height: auto;
+      margin-right: 6px;
+    }
+
+    .logo-text {
+      font-size: 12px;
+      font-weight: bold;
+      color: black;
+    }
+
+    .nav-links {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      z-index: 10;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: bold;
+      color: rgb(25, 22, 22);
+      padding: 4px 8px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-links img {
+      width: 20px;
+      height: 20px;
+    }
+
+    /* Main container */
+    .container {
+      background: white;
+      padding: 16px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 700px;
+      border: 2px solid blue;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .header {
+      font-size: 20px;
+      font-weight: bold;
+      color: black;
+      margin-bottom: 0;
+      text-align: center;
+    }
+
+    /* Info boxes with checkmark */
+    .info-box {
+      background: #e6e6e6;
+      padding: 12px;
+      border-radius: 10px;
+      text-align: left;
+      font-size: 14px;
+      font-weight: bold;
+      margin: 0;
+      border: 2px solid black;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .info-box span {
+      font-size: 18px;
+      color: green;
+      flex-shrink: 0;
+    }
+
+    .info-box strong {
+      color: black;
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    /* Image box aligned center */
+    .image-box {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .image-box img {
+      max-width: 180px;
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    /* Buttons container */
+    .button-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .button {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: bold;
+      color: white;
+      flex: 1 1 45%;
+      min-width: 120px;
+    }
+
+    .prev {
+      background-color: blue;
+    }
+
+    .home {
+      background-color: black;
+    }
+
+    .button:hover {
+      opacity: 0.8;
+    }
+
+    /* Responsive */
+    @media (max-width: 500px) {
+      .logo-text {
+        font-size: 10px;
+      }
+
+      .nav-links a {
+        font-size: 10px;
+        padding: 2px 5px;
+      }
+
+      .header {
+        font-size: 18px;
+      }
+
+      .info-box {
+        font-size: 13px;
+      }
+
+      .button {
+        font-size: 12px;
+        padding: 6px 12px;
+      }
+
+      .container {
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <img src="../image/Red_Simple_Medical_Health_Logo_3-removebg-preview.png" alt="CardioLume Logo" class="logo" />
+    <span class="logo-text">CardioLume</span>
+  </div>
+
+  <!-- Navigation Links -->
+  <div class="nav-links">
+    <a href="aboutous.html"><img src="../image/home-removebg-preview (1).png" alt="Home" /></a>
+    <a href="signup.html">Sign In</a>
+    <a href="log.html">Log In</a>
+    <a href="log.html">Log Out</a>
+  </div>
+
+  <!-- Main Container -->
+  <div class="container">
+    <h2 class="header">✅ Regular Health Check-ups</h2>
+
+    <div class="info-box">
+      <span>✅</span>
+      <div>
+        <strong>Monitor Blood Pressure</strong><br />
+        Keep it below 120/80 mmHg.
+      </div>
+    </div>
+
+    <div class="info-box">
+      <span>✅</span>
+      <div>
+        <strong>Check Cholesterol & Blood Sugar</strong><br />
+        High levels increase CVD risk.
+      </div>
+    </div>
+
+    <div class="info-box">
+      <span>✅</span>
+      <div>
+        <strong>Consult a Doctor if Necessary</strong><br />
+        Especially if you have a family history of CVD.
+      </div>
+    </div>
+
+    <!-- Image -->
+    <div class="image-box">
+      <img src="../image/checkup.png" alt="Health Check-up Image" />
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="button-container">
+      <button class="button prev" onclick="window.location.href='../Frontend/preventions.html'">Previous</button>
+      <button class="button home" onclick="window.location.href='../Frontend/aboutous.html'">Go to Home</button>
+    </div>
+  </div>
+</body>
+</html>

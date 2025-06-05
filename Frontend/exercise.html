@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Physical Activity & Exercise - CardioLume</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding-top: 80px;
+      box-sizing: border-box;
+    }
+
+    .top-bar {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      display: flex;
+      align-items: center;
+      z-index: 10;
+    }
+
+    .logo {
+      width: 40px;
+      height: auto;
+      margin-right: 6px;
+    }
+
+    .logo-text {
+      font-size: 12px;
+      font-weight: bold;
+      color: black;
+    }
+
+    .nav-links {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: bold;
+      color: rgb(25, 22, 22);
+      padding: 4px 8px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-links img {
+      width: 20px;
+      height: 20px;
+    }
+
+    .container {
+      background: white;
+      padding: 16px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 700px;
+      border: 2px solid blue;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    .header {
+      font-size: 20px;
+      font-weight: bold;
+      color: black;
+      margin-bottom: 15px;
+    }
+
+    .info-box {
+      background: #e6e6e6;
+      padding: 12px;
+      border-radius: 10px;
+      text-align: left;
+      font-size: 14px;
+      font-weight: bold;
+      margin: 10px 0;
+      border: 2px solid black;
+    }
+
+    .info-box strong {
+      color: red;
+    }
+
+    .image-section {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+
+    .image-section img {
+      width: 60px;
+      height: 60px;
+      border-radius: 8px;
+      border: 2px solid black;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .button {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .prev {
+      background-color: blue;
+    }
+
+    .next {
+      background-color: black;
+    }
+
+    @media (max-width: 500px) {
+      .logo-text {
+        font-size: 10px;
+      }
+
+      .nav-links a {
+        font-size: 10px;
+        padding: 2px 5px;
+      }
+
+      .header {
+        font-size: 18px;
+      }
+
+      .info-box {
+        font-size: 13px;
+      }
+
+      .button {
+        font-size: 12px;
+        padding: 6px 12px;
+      }
+
+      .container {
+        padding: 12px;
+      }
+
+      .image-section img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <img src="../image/Red_Simple_Medical_Health_Logo_3-removebg-preview.png" alt="CardioLume Logo" class="logo" />
+    <span class="logo-text">CardioLume</span>
+  </div>
+
+  <!-- Navigation Links -->
+  <div class="nav-links">
+    <a href="aboutous.html"><img src="../image/home-removebg-preview (1).png" alt="Home" /></a>
+    <a href="signup.html">Sign In</a>
+    <a href="log.html">Log In</a>
+    <a href="log.html">Log Out</a>
+  </div>
+
+  <!-- Main Container -->
+  <div class="container">
+    <h2 class="header">🏃‍♂️ Physical Activity & Exercise</h2>
+
+    <div class="info-box">
+      <strong>Aerobic Exercises (150 min/week)</strong><br>
+      Brisk walking, jogging, cycling, swimming.
+    </div>
+
+    <div class="info-box">
+      <strong>Strength Training (2–3 times/week)</strong><br>
+      Bodyweight exercises, resistance bands, light weights.
+    </div>
+
+    <div class="info-box">
+      <strong>Flexibility & Balance</strong><br>
+      Yoga, stretching to reduce stress and improve circulation.
+    </div>
+
+    <div class="info-box">
+      <strong>Active Lifestyle</strong><br>
+      Take the stairs, walk instead of driving, do household chores actively.
+    </div>
+
+    <div class="image-section">
+      <img src="../image/aerobic.png" alt="Aerobic Exercise" />
+      <img src="../image/strength.png" alt="Strength Training" />
+      <img src="../image/flexibility.png" alt="Flexibility & Balance" />
+      <img src="../image/lifestyle.png" alt="Active Lifestyle" />
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="button-container">
+      <button class="button prev" onclick="window.location.href='preventions.html'">Previous</button>
+      <button class="button next" onclick="window.location.href='lifestyle.html'">Next</button>
+    </div>
+  </div>
+</body>
+</html>

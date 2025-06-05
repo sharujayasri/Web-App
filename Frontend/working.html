@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working - CardioLume</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            
+        }
+
+        .navbar .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            width: 60px;
+            height: auto;
+        }
+
+        .logo-text {
+            font-family: "Georgia", serif;
+            font-size: 10px;
+            font-weight: bold;
+            color: black;
+            margin-left: 10px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            color: #0f0f0f;
+        }
+
+        .nav-links img {
+            width: 25px;
+            height: auto;
+            vertical-align: middle;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 800px;
+            text-align: center;
+            border: 3px solid black;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        
+        /* Header */
+        .header {
+            font-size: 26px;
+            font-weight: bold;
+            color: black;
+            margin-top: 50px;
+        }
+
+        /* Content */
+        .content {
+            font-size: 18px;
+            color: black;
+            text-align: center;
+            margin: 20px;
+            line-height: 1.5;
+        }
+
+        /* Bullet Points */
+        .list {
+            font-size: 18px;
+            color: black;
+            text-align: left;
+            margin: 0 auto;
+            width: 80%;
+        }
+
+        .list-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .bullet {
+            color: blue;
+            font-size: 20px;
+            margin-right: 10px;
+        }
+
+        /* Button */
+        .button-container {
+            margin-top: 20px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+            background: #2d492b;
+            color: white;
+        }
+
+        .btn:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo-container">
+            <img src="../image/Red_Simple_Medical_Health_Logo_3-removebg-preview.png" alt="CardioLume Logo" class="logo">
+            <span class="logo-text">CardioLume</span>
+        </div>
+        
+        <div class="nav-links">
+            <a href="aboutous.html">
+                <img src="..//image/home-removebg-preview (1).png" alt="Home">
+            </a>
+            <a href="signup.html">Sign In</a>
+            <a href="log.html">Log In</a>
+            <a href="log.html">Log Out</a>
+        </div>
+    </div>
+
+    <div class="container">
+        
+
+        <!-- Header -->
+        <h2 class="header">Working</h2>
+
+        <!-- Content -->
+        <p class="content">
+            Users input key health parameters (age, blood pressure, cholesterol, glucose levels, lifestyle habits, etc.)
+        </p>
+
+        <!-- Bullet Points -->
+        <div class="list">
+            <div class="list-item">
+                <span class="bullet">🔷</span>
+                <span>Our AI model analyzes the data using advanced machine learning algorithms</span>
+            </div>
+            <div class="list-item">
+                <span class="bullet">🔷</span>
+                <span>The system predicts the risk percentage of cardiovascular disease</span>
+            </div>
+            <div class="list-item">
+                <span class="bullet">🔷</span>
+                <span>Users actionable health tips</span>
+            </div>
+        </div>
+
+        <!-- Button -->
+        <div class="button-container">
+            <button class="btn" onclick="window.location.href='../Frontend/aboutous.html'">GO to Home</button>
+           
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,2 @@
+CMD: C:\Users\YourUsername\AppData\Local\Programs\Python\Python39\python.exe "C:\xampp\htdocs\pdd\Frontend\app.py" 20 70 160 College Female Yes 6 Yes Yes Yes No 100
+OUTPUT: 

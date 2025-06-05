@@ -1,0 +1,2 @@
+male,age,education,currentSmoker,cigsPerDay,BPMeds,prevalentStroke,prevalentHyp,diabetes,totChol,sysBP,diaBP,BMI,heartRate,glucose,Predicted_Probability,Predicted_TenYearCHD,Risk_Category
+0,20,4,0,0,0,0,0,0,120,120,100,23.9,120,100,0.56,1,50-60%: Very High Risk

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup - CardioLume</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Signup Container */
+        .signup-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            width: 350px;
+            text-align: center;
+        }
+
+        /* Logo Section */
+        .logo-section img {
+            width: 100px;
+        }
+
+        .logo-section h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        /* Form Styles */
+        .form-section {
+            margin-top: 20px;
+        }
+
+        form label {
+            display: block;
+            text-align: left;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        form input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Phone Input */
+        .phone-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .country-code {
+            padding: 8px;
+            background: #ddd;
+            border-radius: 5px 0 0 5px;
+        }
+
+        .phone-container input {
+            flex: 1;
+            border-radius: 0 5px 5px 0;
+            border-left: none;
+        }
+
+        /* Signup Button */
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 15px;
+            background: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #2563eb;
+        }
+
+        /* Login Link */
+        .login-text {
+            margin-top: 10px;
+        }
+
+        .login-text a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .login-text a:hover {
+            text-decoration: underline;
+        }
+
+        /* Response Message */
+        #response {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="signup-container">
+        <div class="logo-section">
+            <img src="..//image/Red_Simple_Medical_Health_Logo_3-removebg-preview.png" alt="CardioLume Logo">
+            <h2>CardioLume</h2>
+        </div>
+
+        <div class="form-section">
+            <form id="signupForm">
+                <label for="username">Name</label>
+                <input type="text" id="username" name="username" placeholder="Enter username" required>
+
+                <label for="mobile">Phone Number</label>
+                <div class="phone-container">
+                    <span class="country-code">+91</span>
+                    <input type="text" id="mobile" name="mobile" placeholder="Enter phone number" required>
+                </div>
+
+                <label for="email">Email Id</label>
+                <input type="email" id="email" name="email" placeholder="Enter Your Email Id" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter Your Password" required>
+
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-enter Your Password"
+                    required>
+
+                <button type="submit">SIGN UP</button>
+            </form>
+
+            <p class="login-text">Already have an account? <a href="log.html">Login</a></p>
+
+            <!-- Response Message -->
+            <div id="response"></div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("#signupForm").submit(function (event) {
+                event.preventDefault(); // Prevent default form submission
+
+                let username = $("#username").val().trim();
+                let mobile = $("#mobile").val().trim();
+                let email = $("#email").val().trim();
+                let password = $("#password").val().trim();
+                let confirmPassword = $("#confirmPassword").val().trim();
+
+                if (password !== confirmPassword) {
+                    $("#response").html("<p style='color:red;'>Passwords do not match!</p>");
+                    return;
+                }
+
+                let formData = {
+                    username: username,
+                    mobile: mobile,
+                    email: email,
+                    password: password
+                };
+
+                $.ajax({
+                    url: "../Backend/signup.php",
+                    type: "POST",
+                    contentType: "application/json",
+                    data: JSON.stringify(formData), // Send JSON data
+                    success: function (response) {
+                        let jsonResponse = typeof response === "string" ? JSON.parse(response) : response;
+                        if (jsonResponse.status === "success") {
+                            alert("Signup successful!");
+                            setTimeout(() => {
+                                window.location.href = "log.html"; // Redirect after success
+                            }, 2000);
+                        } else {
+                            alert("Error: " + jsonResponse.message);
+                        }
+                    },
+                    error: function () {
+                        alert("Error in submission. Please try again.");
+                    }
+
+                });
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>

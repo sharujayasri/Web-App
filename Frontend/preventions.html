@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preventions - CardioLume</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      position: relative;
+    }
+
+    /* Top Bar for Logo and Navbar */
+    .top-bar {
+      position: absolute;
+      top: 5px;
+      left: 10px;
+      right: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px 10px;
+      flex-wrap: wrap;
+    }
+
+    /* Logo Section (Aligned to Top Left) */
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      width: 40px;
+      height: auto;
+      margin-right: 5px;
+    }
+
+    .logo-text {
+      font-size: 12px;
+      font-weight: bold;
+      color: black;
+    }
+
+    /* Navbar Section (Aligned to Top Right) */
+    .navbar {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: bold;
+      color: rgb(73, 54, 54);
+      margin: 0 4px;
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar a img {
+      width: 18px;
+      margin-right: 2px;
+    }
+
+    .navbar a:hover {
+      color: #ff4d4d;
+    }
+
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+      width: 500px;
+      text-align: center;
+    }
+
+    /* Header */
+    .header {
+      font-size: 22px;
+      font-weight: bold;
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+
+    /* Prevention Buttons */
+    .prevention-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 25px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      color: black;
+    }
+
+    .green { background: #2d952b; color: white; }
+    .gray { background: #b3b3b3; }
+    .yellow { background: #ffd700; }
+    .blue { background: #007bff; color: white; }
+
+    .arrow {
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+      background: rgba(0, 0, 0, 0.2);
+      padding: 5px 15px;
+      border-radius: 50%;
+    }
+
+    .green .arrow { background: white; color: black; }
+    .gray .arrow { background: black; color: white; }
+    .yellow .arrow { background: black; color: white; }
+    .blue .arrow { background: white; color: black; }
+
+    .prevention-item:hover {
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <!-- Top Bar for Logo and Navbar -->
+  <div class="top-bar">
+    <div class="logo-container">
+      <img src="../image/Red_Simple_Medical_Health_Logo_3-removebg-preview.png" alt="CardioLume Logo" class="logo">
+      <span class="logo-text">CardioLume</span>
+    </div>
+    <div class="navbar">
+      <a href="aboutous.html">
+        <img src="../image/home-removebg-preview (1).png" alt="Home">
+      </a>
+      <a href="signup.html">Sign In</a>
+      <a href="log.html">Login</a>
+      <a href="log.html">Logout</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Header -->
+    <h2 class="header">Preventive Measures for Cardiovascular Disease (CVD)</h2>
+
+    <!-- Prevention Buttons -->
+    <a href="heathyheart.html" class="prevention-item green">
+      Heart-Healthy Diet <span class="arrow">&#9654;</span>
+    </a>
+
+    <a href="exercise.html" class="prevention-item gray">
+      Physical Activity & Exercise <span class="arrow">&#9654;</span>
+    </a>
+
+    <a href="lifestyle.html" class="prevention-item yellow">
+      Lifestyle Modifications <span class="arrow">&#9654;</span>
+    </a>
+
+    <a href="checkups.html" class="prevention-item blue">
+      Regular Health Check-ups <span class="arrow">&#9654;</span>
+    </a>
+  </div>
+</body>
+</html>

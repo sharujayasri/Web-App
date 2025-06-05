@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fill Details - CardioLume</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      position: relative;
+    }
+
+    .container {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+      width: 350px;
+      text-align: center;
+      position: relative;
+    }
+
+    .logo-container {
+      position: fixed;
+      top: 10px;
+      left: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      width: 50px;
+      height: auto;
+      margin-right: 5px;
+    }
+
+    .logo-text {
+      font-family: "Georgia", serif;
+      font-size: 12px;
+      font-weight: bold;
+      color: black;
+    }
+
+    .navbar {
+      position: fixed;
+      top: 10px;
+      right: 20px;
+      display: flex;
+      align-items: center;
+      gap: 0;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: bold;
+      color: rgb(73, 54, 54);
+      margin: 0 2px;
+    }
+
+    .navbar a:hover {
+      color: #ff4d4d;
+    }
+
+    .form-group {
+      display: flex;
+      align-items: center;
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 4px;
+      margin: 4px 0;
+    }
+
+    .form-group img {
+      width: 25px;
+      margin-right: 10px;
+    }
+
+    .form-group input,
+    .form-group select {
+      border: none;
+      outline: none;
+      width: 90%;
+      font-size: 12px;
+      padding: 4px;
+    }
+
+    .next-btn {
+      width: 100%;
+      padding: 8px;
+      margin-top: 10px;
+      background: #2d492b;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .next-btn:hover {
+      background: #1a301a;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="logo-container">
+    <img src="../image/Red_Simple_Medical_Health_Logo_3-removebg-preview.png" alt="CardioLume Logo" class="logo" />
+    <span class="logo-text">CardioLume</span>
+  </div>
+
+  <div class="navbar">
+    <a href="aboutous.html"><img src="../image/home-removebg-preview (1).png" alt="Home" width="20" /></a>
+    <a href="signup.html">Sign In</a>
+    <a href="log.html">Login</a>
+    <a href="log.html">Logout</a>
+  </div>
+  <div class="container">
+    <h2 class="header">Fill the Details</h2>
+
+    <form id="detailsForm">
+
+      <!-- Form Fields -->
+      <div class="form-group">
+        <img src="../image/gender.png" alt="Gender" />
+        <select name="male" required>
+          <option value="" disabled selected>Select Gender</option>
+          <option value="1">Male</option>
+          <option value="0">Female</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <img src="../image/age.jpg" alt="Age" />
+        <input type="number" name="age" placeholder="Enter your Age" required />
+      </div>
+
+      <div class="form-group">
+        <img src="../image/education.png" alt="Education" />
+        <select name="education" required>
+          <option value="" disabled selected>Profession</option>
+          <option value="1">Some High School</option>
+          <option value="2">working</option>
+          <option value="3">Some College</option>
+          <option value="4">other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <img src="../image/smooking.png" alt="Smoking" />
+        <select name="currentSmoker" required>
+          <option value="" disabled selected>Currently Smoking?</option>
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <input type="number" name="cigsPerDay" placeholder="Cigarettes per Day" required />
+      </div>
+
+      <div class="form-group">
+        <select name="BPMeds" required>
+          <option value="" disabled selected>Taking BP Medication?</option>
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <select name="prevalentStroke" required>
+          <option value="" disabled selected>Prevalent Stroke?</option>
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <select name="prevalentHyp" required>
+          <option value="" disabled selected>Prevalent Hypertension?</option>
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <select name="diabetes" required>
+          <option value="" disabled selected>Diabetes?</option>
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <input type="number" name="totChol" placeholder="Total Cholesterol (mg/dL)" required />
+      </div>
+
+      <div class="form-group">
+        <input type="number" name="sysBP" placeholder="Systolic BP (mmHg)" required />
+      </div>
+
+      <div class="form-group">
+        <input type="number" name="diaBP" placeholder="Diastolic BP (mmHg)" required />
+      </div>
+
+      <div class="form-group">
+        <input type="number" step="0.01" name="BMI" placeholder="Body Mass Index (BMI)eg:23.7" required />
+      </div>
+
+      <div class="form-group">
+        <input type="number" name="heartRate" placeholder="Heart Rate (beats/min)" required />
+      </div>
+
+      <div class="form-group">
+        <input type="number" name="glucose" placeholder="Glucose Level (mg/dL)" required />
+      </div>
+
+      <button type="submit" class="next-btn">SUBMIT</button>
+    </form>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script>
+    $("#detailsForm").submit(function (event) {
+      event.preventDefault();
+  
+      const formData = {};
+      $(this).serializeArray().forEach(function (field) {
+        formData[field.name] = field.value;
+      });
+  
+      $.ajax({
+        url: "fill_detail.php",
+        type: "POST",
+        contentType: "application/json",
+        data: JSON.stringify(formData),
+        dataType: "json",
+        success: function (response) {
+          if (response.status === "success") {
+            alert("Form submitted successfully!");
+            localStorage.setItem("prediction_result", response.python_output);
+            window.location.href = "prediction.html";
+          } else {
+            alert("Error: " + (response.message || "Something went wrong."));
+          }
+        },
+        error: function (xhr, status, error) {
+          console.error("AJAX Error:", status, error);
+          alert("Something went wrong while submitting the form.");
+        }
+      });
+    });
+  </script>
+  
+  
+</body>
+</html>

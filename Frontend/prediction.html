@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Prediction Result - CardioLume</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      position: relative;
+    }
+
+    .video-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      height: 60%;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .video-container video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+      width: 350px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .logo-container {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      display: flex;
+      align-items: center;
+      z-index: 2;
+    }
+
+    .logo {
+      width: 50px;
+      height: auto;
+      margin-right: 5px;
+    }
+
+    .logo-text {
+      font-family: "Georgia", serif;
+      font-size: 13px;
+      font-weight: bold;
+      color: black;
+    }
+
+    .navbar {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      display: flex;
+      align-items: center;
+      z-index: 2;
+      flex-wrap: wrap;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: bold;
+      color: rgb(73, 54, 54);
+      margin: 0 6px;
+    }
+
+    .navbar a img {
+      width: 18px;
+      vertical-align: middle;
+    }
+
+    .navbar a:hover {
+      color: #ff4d4d;
+    }
+
+    .form-group {
+      display: flex;
+      align-items: center;
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 4px;
+      margin: 4px 0;
+    }
+
+    .form-group img {
+      width: 25px;
+      margin-right: 10px;
+    }
+
+    .form-group input,
+    .form-group select {
+      border: none;
+      outline: none;
+      width: 90%;
+      font-size: 12px;
+      padding: 4px;
+    }
+
+    .next-btn {
+      width: 100%;
+      padding: 8px;
+      margin-top: 10px;
+      background: #2d492b;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .next-btn:hover {
+      background: #1a301a;
+    }
+
+    @media (max-width: 600px) {
+      .logo {
+        width: 40px;
+      }
+
+      .logo-text {
+        font-size: 12px;
+      }
+
+      .navbar a {
+        font-size: 12px;
+        margin: 0 4px;
+      }
+
+      .navbar a img {
+        width: 16px;
+      }
+
+      .container {
+        width: 90%;
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Video in the center of the screen -->
+  <div class="video-container">
+    <video autoplay loop muted>
+      <source src="../image/heartbeat.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- Logo and name on the left -->
+  <div class="logo-container">
+    <img src="../image/Red_Simple_Medical_Health_Logo_3-removebg-preview.png" alt="CardioLume Logo" class="logo" />
+    <span class="logo-text">CardioLume</span>
+  </div>
+
+  <!-- Navbar items moved to right -->
+  <div class="navbar">
+    <a href="aboutous.html"><img src="../image/home-removebg-preview (1).png" alt="Home" /></a>
+    <a href="signup.html">Sign In</a>
+    <a href="log.html">Login</a>
+    <a href="log.html">Logout</a>
+  </div>
+
+  <div class="container">
+    <h2 class="header">Prediction Result</h2>
+    <div id="result">
+      <!-- Prediction result will be inserted here -->
+    </div>
+    <button class="next-btn" onclick="window.location.href='preventions.html'">Next</button>
+    <button class="next-btn" onclick="window.location.href='fill_detail.html'">Go Back</button>
+  </div>
+
+  <script>
+    fetch('prediction.php')
+      .then(response => response.json())
+      .then(data => {
+        const resultDiv = document.getElementById('result');
+        if (data.status === 'success') {
+          resultDiv.innerHTML = `<p>Prediction Probability: ${data.probability}</p>`;
+        } else {
+          resultDiv.innerHTML = `<p>Error: ${data.message}</p>`;
+        }
+      })
+      .catch(error => {
+        const resultDiv = document.getElementById('result');
+        resultDiv.innerHTML = `<p>Error fetching prediction result.</p>`;
+      });
+  </script>
+
+</body>
+</html>

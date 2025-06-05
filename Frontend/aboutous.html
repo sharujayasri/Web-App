@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fill Details - CardioLume</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      position: relative;
+      font-size: 15px;
+    }
+
+    .container {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+      width: 350px;
+      text-align: center;
+      position: relative;
+    }
+
+    .logo-container {
+      position: fixed;
+      top: 10px;
+      left: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      width: 50px;
+      height: auto;
+      margin-right: 5px;
+    }
+
+    .logo-text {
+      font-family: "Georgia", serif;
+      font-size: 12px;
+      font-weight: bold;
+      color: black;
+    }
+
+    .navbar {
+      position: fixed;
+      top: 10px;
+      right: 20px;
+      display: flex;
+      align-items: center;
+      gap: 0;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: bold;
+      color: rgb(73, 54, 54);
+      margin: 0 2px;
+    }
+
+    .navbar a:hover {
+      color: #ff4d4d;
+    }
+
+    .form-group {
+      display: flex;
+      align-items: center;
+      background: white;
+      border: 1px solid #000000; /* Darker black border */
+      border-radius: 5px;
+      padding: 4px;
+      margin: 4px 0;
+    }
+
+    .form-group img {
+      width: 25px;
+      margin-right: 10px;
+    }
+
+    .form-group input,
+    .form-group select {
+      border: none;
+      outline: none;
+      width: 90%;
+      font-size: 14px; /* Slightly bigger font */
+      padding: 4px;
+    }
+
+    .next-btn, .btn {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      background: #28a745; /* Green */
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 17px;
+      font-weight: bold;
+    }
+
+    .next-btn:hover, .btn:hover {
+      background: #218838;
+    }
+
+    .about-text {
+      color: red; /* Red About Us text */
+      font-size: 15px;
+      margin: 10px 0;
+    }
+
+    .highlight {
+      font-weight: bold;
+    }
+
+    .header {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: rgb(22, 22, 22);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="logo-container">
+    <img src="../image/Red_Simple_Medical_Health_Logo_3-removebg-preview.png" alt="CardioLume Logo" class="logo" />
+    <span class="logo-text">CardioLume</span>
+  </div>
+
+  <div class="navbar">
+    <a href="aboutous.html"><img src="../image/home-removebg-preview (1).png" alt="Home" width="20" /></a>
+    <a href="signup.html">Sign In</a>
+    <a href="log.html">Login</a>
+    <a href="profil.php">Profile</a>
+  </div>
+
+  <div class="wrapper">
+    <div class="container">
+      <h2 class="header">About Us</h2>
+      <p class="about-text">
+        <span class="highlight">CardioLume</span> is an AI-powered platform designed to predict cardiovascular disease risk and promote heart health. Using advanced machine learning algorithms, our system analyzes key health parameters to provide personalized risk assessments and actionable lifestyle recommendations.
+      </p>
+      <p class="about-text">
+        Our goal is to enable early detection, encourage preventive care, and support better heart health decisions. With a secure and user-friendly approach, we help individuals take control of their well-being through AI-driven insights and expert-backed guidance.
+      </p>
+      <button class="btn" onclick="window.location.href='../Frontend/fill_detail.html'">Next</button>
+    </div>
+  </div>
+
+</body>
+</html>
